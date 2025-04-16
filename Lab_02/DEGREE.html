@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Degree Validation</title>
+    <script>
+        function validateDegree() {
+            // Select all checked checkboxes with the name "degree"
+            let degreeOptions = document.querySelectorAll("input[name=degree]:checked");
+            if (degreeOptions.length === 0) {
+                alert("Please select at least one degree!");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="return validateDegree()">
+        <fieldset>
+            <legend>Degree</legend>
+            <input type="checkbox" id="ssc" name="degree" value="SSC">
+            <label for="ssc">SSC</label>
+            <input type="checkbox" id="hsc" name="degree" value="HSC">
+            <label for="hsc">HSC</label>
+            <input type="checkbox" id="bsc" name="degree" value="BSC">
+            <label for="bsc">BSC</label>
+        </fieldset>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

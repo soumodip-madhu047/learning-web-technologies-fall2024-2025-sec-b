@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login Page</title>
+        <script>
+            // JavaScript functions
+            function isUsernameEmpty() {
+                const username = document.forms["loginForm"]["username"].value;
+                if (username === "") {
+                    alert("Username cannot be empty!");
+                    return false;
+                }
+                return true;
+            }
+
+            function isPasswordEmpty() {
+                const password = document.forms["loginForm"]["password"].value;
+                if (password === "") {
+                    alert("Password cannot be empty!");
+                    return false;
+                }
+                return true;
+            }
+            function areUsernameAndPasswordSame() {
+                const username = document.forms["loginForm"]["username"].value;
+                const password = document.forms["loginForm"]["password"].value;
+                if (username === password) {
+                    
+                    return true; // Prevent submission if they are the same
+                }
+                alert("Username and Password cannot be the different!");
+                return false; // Allow submission if they are different
+            }
+
+            function validateForm() {
+                // Check all conditions
+                if (isUsernameEmpty() && isPasswordEmpty() && areUsernameAndPasswordSame()) {
+                    return true; // Submit the form
+                }
+                alert("Form submission failed! Please check the errors and try again.");
+                return false; // Prevent form submission
+            }
+        </script>
+    </head>
+    <body>
+        <center>
+        <form name="loginForm" action="home.html" method="get" onsubmit="return validateForm()">
+            <fieldset>
+                <legend>Log In Form</legend>
+            
+            <table>
+                <tr>
+                    <td colspan="2" style="text-align: center;"><h2>Login</h2></td>
+                </tr>
+                <tr>
+                    <td>Username:</td>
+                    <td><input type="text" name="username" required></td>
+                </tr>
+                <tr>
+                    <td>Password:</td>
+                    <td><input type="password" name="password" required></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                        <input type="checkbox" name="rememberMe"> Remember Me
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center;"><input type="submit" value="Login"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                        <a href="forget_password.html">Forget Password?</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                        <a href="home.html">Go to Home</a>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+        </form>
+        </center>
+    </body>
+</html>

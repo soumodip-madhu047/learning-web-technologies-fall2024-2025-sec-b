@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+</head>
+<body>
+    <center>
+        <h3>Register Here</h3>
+        <form action="login.html" method="">
+            <fieldset>
+                <legend>Registration Form</legend>
+            <table>
+				<tr>
+                    <td>
+                        First Name:
+                    </td>
+                    <td>
+                        <input type="text" name="first_name">
+                    </td>
+                </tr>
+				<tr>
+                    <td>
+                        Last Name:
+                    </td>
+                    <td>
+                        <input type="text" name="last_name">
+                    </td>
+                </tr>
+				<tr>
+                    <td>
+                        ID:
+                    </td>
+                    <td>
+                        <input type="Number" name="id">
+                    </td>
+                </tr>
+				<tr>
+                    <td>
+                        Email:
+                    </td>
+                    <td>
+                        <input type="email" name="Email">
+                    </td>
+                </tr>
+				<tr>
+                    <td>
+                        Password:
+                    </td>
+                    <td>
+                        <input type="Password" name="User Password">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Date of Birth:
+                    </td>
+                    <td>
+                        <input type="Date" name="date_of_birth">
+                    </td>
+                </tr>
+                
+                
+                <tr>
+                    <td>Gender:</td>
+                    <td>
+                        <input type="radio" name="gender">Male
+                        <input type="radio" name="gender">Female
+                        <input type="radio" name="gender">Others
+                    </td>
+                </tr>
+				
+				
+				<tr>
+                    <td>Skills:</td>
+                    <td>
+                        <label for="skills">Select Skills (Choose multiple if applicable):</label><br>
+						
+						<input type="checkbox" id="skill1" name="skills" value="programming">
+						<label for="skill4">Programming</label><br>
+        
+						<input type="checkbox" id="skill2" name="skills" value="analysis">
+						<label for="skill5">Data Analysis</label><br>
+        
+						<input type="checkbox" id="skill3" name="skills" value="Web3">
+						<label for="skill6">Web3</label><br>
+						
+						<input type="checkbox" id="skill1" name="skills" value="python">
+						<label for="skill1">Python</label><br>
+        
+        
+                    </td>
+                </tr>
+				
+				<tr>
+                    <td>Department:</td>
+                    <td>
+                        <select id="department" name="department">
+						<option value="cse">CSE</option>
+						<option value="eee">EEE</option>
+						<option value="bba">BBA</option>
+						<option value="english">English</option>
+						<option value="pharmacy">Pharmacy</option>
+						</select>
+                    </td>
+                </tr>
+				
+				
+				<tr>
+                    <td>Address:</td>
+                    <td>
+                         <textarea name="text" rows="4" cols="50"></textarea>
+                    </td>
+                </tr>
+				
+				<tr>
+                    <td>Profile picture:</td>
+                    <td>
+                        <input type="file" id="image" name="image" accept="image/*">
+                    </td>
+                </tr>
+				
+				<tr>
+                    
+                    <td>
+                        <input type="button" value="Click Me">
+						<input type="submit" value="Submit">
+						<input type="reset" value="LogIn">
+                    </td>
+                </tr>
+			
+                
+            </table>
+            </fieldset>
+        </form>
+    </center>
+</body>
+</html>
